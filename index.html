@@ -1,8 +1,492 @@
 <!DOCTYPE html>
-<html>
-<head><title>Atul Padol</title></head>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Message App - Simple, Fast & Easy SMS Messaging</title>
+
+    <meta name="description"
+          content="Message App is a simple, fast and easy-to-use SMS messaging app for managing everyday text conversations.">
+
+    <meta name="theme-color" content="#1976D2">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f5f7fb;
+            color: #202124;
+            line-height: 1.6;
+        }
+
+        /* Header */
+        .hero {
+            background: linear-gradient(135deg, #1976D2, #1565C0);
+            color: #ffffff;
+            text-align: center;
+            padding: 70px 20px 65px;
+        }
+
+        .hero-icon {
+            width: 90px;
+            height: 90px;
+            margin: 0 auto 20px;
+            border-radius: 22px;
+            background: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #1976D2;
+            font-size: 42px;
+            font-weight: bold;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.18);
+        }
+
+        .hero h1 {
+            margin: 0 0 10px;
+            font-size: 38px;
+            font-weight: 700;
+        }
+
+        .hero p {
+            margin: 0;
+            font-size: 19px;
+            opacity: 0.95;
+        }
+
+        /* Main */
+        .container {
+            width: 100%;
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .card {
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 30px;
+            margin-bottom: 24px;
+            box-shadow: 0 4px 18px rgba(0, 0, 0, 0.07);
+        }
+
+        .card h2 {
+            margin: 0 0 18px;
+            color: #1565C0;
+            font-size: 25px;
+        }
+
+        .card p {
+            margin: 0 0 15px;
+        }
+
+        .card p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Features */
+        .features {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .features li {
+            position: relative;
+            padding: 10px 0 10px 30px;
+            border-bottom: 1px solid #eeeeee;
+        }
+
+        .features li:last-child {
+            border-bottom: none;
+        }
+
+        .features li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            top: 9px;
+            color: #1976D2;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        /* Information table */
+        .info-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .info-table tr {
+            border-bottom: 1px solid #e8eaed;
+        }
+
+        .info-table tr:last-child {
+            border-bottom: none;
+        }
+
+        .info-table td {
+            padding: 13px 8px;
+            vertical-align: top;
+        }
+
+        .info-table td:first-child {
+            width: 38%;
+            font-weight: 600;
+            color: #444;
+        }
+
+        /* Google Play button */
+        .play-button {
+            display: inline-block;
+            margin-top: 8px;
+            padding: 13px 22px;
+            background: #1976D2;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 9px;
+            font-weight: 600;
+            transition: background 0.2s ease;
+        }
+
+        .play-button:hover {
+            background: #125ca8;
+        }
+
+        /* Links */
+        a {
+            color: #1565C0;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 35px 20px 45px;
+            color: #6b7280;
+            font-size: 14px;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+
+        /* Mobile */
+        @media (max-width: 600px) {
+
+            .hero {
+                padding: 50px 18px;
+            }
+
+            .hero-icon {
+                width: 76px;
+                height: 76px;
+                border-radius: 18px;
+                font-size: 34px;
+            }
+
+            .hero h1 {
+                font-size: 30px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .container {
+                margin: 25px auto;
+                padding: 0 14px;
+            }
+
+            .card {
+                padding: 22px;
+                border-radius: 13px;
+            }
+
+            .card h2 {
+                font-size: 22px;
+            }
+
+            .info-table td {
+                padding: 11px 5px;
+                font-size: 14px;
+            }
+
+            .info-table td:first-child {
+                width: 40%;
+            }
+        }
+    </style>
+</head>
+
 <body>
-<h1>Welcome</h1>
-<p>This site hosts app-ads.txt for AdMob verification.</p>
+
+    <!-- Header -->
+    <header class="hero">
+
+        <div class="hero-icon">
+            M
+        </div>
+
+        <h1>Message App</h1>
+
+        <p>
+            Simple, Fast &amp; Easy SMS Messaging
+        </p>
+
+    </header>
+
+
+    <!-- Main Content -->
+    <main class="container">
+
+        <!-- About -->
+        <section class="card">
+
+            <h2>About this app</h2>
+
+            <p>
+                Message App is a simple and easy-to-use SMS messaging app
+                designed to help you manage your everyday text conversations.
+            </p>
+
+            <p>
+                Send and receive SMS messages, organise conversations and
+                access useful messaging tools from a clean and intuitive
+                interface.
+            </p>
+
+        </section>
+
+
+        <!-- Features -->
+        <section class="card">
+
+            <h2>Key Features</h2>
+
+            <ul class="features">
+
+                <li>Send and receive SMS messages</li>
+
+                <li>View and manage conversations</li>
+
+                <li>Start new conversations easily</li>
+
+                <li>Archive conversations</li>
+
+                <li>Block unwanted numbers</li>
+
+                <li>Star important messages</li>
+
+                <li>Schedule SMS messages</li>
+
+                <li>
+                    Recover supported deleted messages from the recycle bin
+                </li>
+
+                <li>Light and dark theme support</li>
+
+                <li>Clean and easy-to-use interface</li>
+
+            </ul>
+
+        </section>
+
+
+        <!-- Default SMS App -->
+        <section class="card">
+
+            <h2>Default SMS App</h2>
+
+            <p>
+                To provide its core messaging functionality, Message App can
+                be set as your device's default SMS application.
+            </p>
+
+            <p>
+                SMS-related permissions are used to send, receive, display
+                and manage text messages.
+            </p>
+
+        </section>
+
+
+        <!-- Privacy -->
+        <section class="card">
+
+            <h2>Privacy</h2>
+
+            <p>
+                Message App is designed to provide its messaging features
+                while respecting user privacy.
+            </p>
+
+            <p>
+                Some third-party services, such as advertising and app
+                performance services, may process data according to their
+                respective privacy practices.
+            </p>
+
+            <p>
+                Please review the app's privacy policy for more information
+                about data handling and third-party services.
+            </p>
+
+        </section>
+
+
+        <!-- App Information -->
+        <section class="card">
+
+            <h2>App Information</h2>
+
+            <table class="info-table">
+
+                <tr>
+                    <td>Version</td>
+                    <td>1.0.1</td>
+                </tr>
+
+                <tr>
+                    <td>Updated on</td>
+                    <td>12 September 2026</td>
+                </tr>
+
+                <tr>
+                    <td>Requires Android</td>
+                    <td>Android 8.0 and up</td>
+                </tr>
+
+                <tr>
+                    <td>Downloads</td>
+                    <td>1+ downloads</td>
+                </tr>
+
+                <tr>
+                    <td>In-app purchases</td>
+                    <td>₹100.00 – ₹800.00 per item</td>
+                </tr>
+
+                <tr>
+                    <td>Content rating</td>
+                    <td>Rated for 12+ · Parental guidance recommended</td>
+                </tr>
+
+                <tr>
+                    <td>Interactive elements</td>
+                    <td>Users interact, In-app purchases</td>
+                </tr>
+
+                <tr>
+                    <td>Released on</td>
+                    <td>9 September 2026</td>
+                </tr>
+
+                <tr>
+                    <td>Offered by</td>
+                    <td>ASP App</td>
+                </tr>
+
+                <tr>
+                    <td>Package name</td>
+                    <td>com.ap.messages</td>
+                </tr>
+
+            </table>
+
+        </section>
+
+
+        <!-- Compatibility -->
+        <section class="card">
+
+            <h2>Device Compatibility</h2>
+
+            <p>
+                Message App is compatible with supported Android devices.
+            </p>
+
+            <table class="info-table">
+
+                <tr>
+                    <td>Active device</td>
+                    <td>OPPO CPH2823</td>
+                </tr>
+
+                <tr>
+                    <td>Version</td>
+                    <td>1.0.1</td>
+                </tr>
+
+                <tr>
+                    <td>Compatibility</td>
+                    <td>Works on your device</td>
+                </tr>
+
+                <tr>
+                    <td>Download size</td>
+                    <td>10 MB</td>
+                </tr>
+
+                <tr>
+                    <td>Requires</td>
+                    <td>Android 8.0 and up</td>
+                </tr>
+
+            </table>
+
+            <p style="margin-top: 18px; color: #6b7280; font-size: 14px;">
+                Compatibility information may vary depending on the device,
+                Android version and Google Play availability.
+            </p>
+
+        </section>
+
+
+        <!-- Google Play -->
+        <section class="card">
+
+            <h2>Download Message App</h2>
+
+            <p>
+                Download Message App from Google Play for a simple and
+                convenient way to manage your SMS conversations.
+            </p>
+
+            <a
+                class="play-button"
+                href="https://play.google.com/store/apps/details?id=com.ap.messages"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Get it on Google Play
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            &copy; 2026 ASP App. All rights reserved.
+        </p>
+
+        <p>
+            Message App &middot; Simple, Fast &amp; Easy SMS Messaging
+        </p>
+
+    </footer>
+
 </body>
 </html>
